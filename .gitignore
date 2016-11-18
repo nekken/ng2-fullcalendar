@@ -1,0 +1,10 @@
+# dependencies
+node_nodules/
+
+# tsc generated files
+*.map
+*.js
+*.d.ts
+src/*/*.map
+src/*/*.js
+src/*/*.d.ts
