@@ -28,7 +28,7 @@ export class CalendarComponent implements OnInit,AfterViewInit,AfterContentCheck
 
   ngAfterViewInit(){
     setTimeout(()=>{
-      console.log("100ms after ngAfterViewInit ");
+      // console.log("100ms after ngAfterViewInit ");
       $('angular2-fullcalendar').fullCalendar(this.options);
     }, 100)
   }
