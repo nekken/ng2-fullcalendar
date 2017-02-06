@@ -1,7 +1,7 @@
 
 # Angular 2: FullCalendar component
 
-An Angular 2 component for fullcalendar
+An Angular 2 component for [fullcalendar](https://fullcalendar.io/).
 
 ## Installation
 ```
