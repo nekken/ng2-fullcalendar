@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, AfterViewInit, AfterContentChecked, AfterViewChecked} from '@angular/core';
+import {Component, Input, OnInit, AfterViewInit, AfterContentChecked, AfterViewChecked, ElementRef} from '@angular/core';
 import * as $ from 'jquery';
 import 'fullcalendar';
 import {Options} from "fullcalendar";
@@ -19,7 +19,9 @@ export class CalendarComponent implements OnInit,AfterViewInit,AfterContentCheck
   text: string;
   calendarInitiated:boolean;
 
-  constructor() {
+  constructor(
+    private element:ElementRef
+  ) {
   }
 
   ngOnInit():void {
@@ -35,5 +37,13 @@ export class CalendarComponent implements OnInit,AfterViewInit,AfterContentCheck
   ngAfterContentChecked(){
   }
   ngAfterViewChecked(){
+  }
+
+  updateEvent(event) {
+    return $(this.element.nativeElement).fullCalendar('updateEvent', event);
+  }
+
+  clientEvents(idOrFilter) {
+    return $(this.element.nativeElement).fullCalendar('clientEvents', idOrFilter);
   }
 }
