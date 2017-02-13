@@ -15,13 +15,11 @@ import {Options} from "fullcalendar";
 })
 export class CalendarComponent implements OnInit,AfterViewInit,AfterContentChecked,AfterViewChecked{
 
-  @Input() options:Options;
+  @Input() options: Options;
   text: string;
-  calendarInitiated:boolean;
+  calendarInitiated: boolean;
 
-  constructor(
-    private element:ElementRef
-  ) {
+  constructor(private element:ElementRef) {
   }
 
   ngOnInit():void {
@@ -37,6 +35,10 @@ export class CalendarComponent implements OnInit,AfterViewInit,AfterContentCheck
   ngAfterContentChecked(){
   }
   ngAfterViewChecked(){
+  }
+
+  fullCalendar(e, d) {
+    return $(this.element.nativeElement).fullCalendar(e, d);
   }
 
   updateEvent(event) {
