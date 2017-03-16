@@ -8,7 +8,7 @@ An Angular 2 component for [fullcalendar](https://fullcalendar.io/).
 npm install ap-angular2-fullcalendar --save
 ```
 ## Usage
-####Import the calendar component
+#### Import the calendar component
 ```
 import {CalendarComponent} from "angular2-fullcalendar/src/calendar/calendar";
 // other imports
@@ -110,7 +110,7 @@ Alternatively, you can just reference the file directly. This would look somethi
 <link href="node_modules/fullcalendar/fullcalendar.min.css" rel="stylesheet">
 ```
 
-####Use CalendarComponent as a ViewChild
+#### Use CalendarComponent as a ViewChild
 ```
 export class MyComponent{
   @ViewChild(CalendarComponent) myCalendar: CalendarComponent;
