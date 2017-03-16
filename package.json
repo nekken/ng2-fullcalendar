@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lbertenasco/ng2-fullcalendar.git"
+    "url": "git+https://github.com/lbertenasco/ap-ng2-fullcalendar.git"
   },
   "keywords": [
     "fullcalendar",
@@ -19,9 +19,9 @@
   "author": "Luciano Bertenasco <lbertenasco@gmail.com> ()",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lbertenasco/ng2-fullcalendar/issues"
+    "url": "https://github.com/lbertenasco/ap-ng2-fullcalendar/issues"
   },
-  "homepage": "https://github.com/lbertenasco/ng2-fullcalendar#readme",
+  "homepage": "https://github.com/lbertenasco/ap-ng2-fullcalendar#readme",
   "dependencies": {
     "@angular/common": "2.4.9",
     "@angular/core": "2.4.9",
