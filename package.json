@@ -23,9 +23,9 @@
   },
   "homepage": "https://github.com/lbertenasco/ap-ng2-fullcalendar#readme",
   "dependencies": {
-    "@angular/common": "2.4.9",
-    "@angular/core": "2.4.9",
-    "@angular/forms": "2.4.9",
+    "@angular/common": "2.4.10",
+    "@angular/core": "2.4.10",
+    "@angular/forms": "2.4.10",
     "@types/fullcalendar": "2.7.38",
     "@types/jquery": "2.0.41",
     "@types/moment": "2.13.0",
@@ -33,8 +33,8 @@
     "fullcalendar": "3.2.0"
   },
   "devDependencies": {
-    "@angular/compiler": "2.4.9",
-    "@angular/platform-browser": "2.4.9",
+    "@angular/compiler": "2.4.10",
+    "@angular/platform-browser": "2.4.10",
     "ng2-datepicker": "2.0.0-dev5",
     "rxjs": "5.2.0",
     "typescript": "2.2.1"
