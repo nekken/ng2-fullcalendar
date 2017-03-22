@@ -5,17 +5,17 @@ An Angular 2 component for [fullcalendar](https://fullcalendar.io/).
 
 ## Installation
 ```
-npm install ap-angular2-fullcalendar --save
+npm install angular2-fullcalendar --save
 ```
 ## Usage
-#### Import the calendar component
+####Import the calendar component
 ```
 import {CalendarComponent} from "angular2-fullcalendar/src/calendar/calendar";
-// other imports
+// other imports 
 
 @NgModule({
   declarations: [
-    // other declarations
+    // other declarations 
     CalendarComponent
   ],
   // ...
@@ -108,16 +108,6 @@ If you're using Angular CLI, this is as simple as including one line in your sty
 Alternatively, you can just reference the file directly. This would look something like
 ```
 <link href="node_modules/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
-```
-
-#### Use CalendarComponent as a ViewChild
-```
-export class MyComponent{
-  @ViewChild(CalendarComponent) myCalendar: CalendarComponent;
-
-  changeCalendarView(view) {
-    this.myCalendar.fullCalendar('changeView', view);
-  }
 ```
 
 ## TODO's
