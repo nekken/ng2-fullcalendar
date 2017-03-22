@@ -1,6 +1,6 @@
 {
-  "name": "angular2-fullcalendar",
-  "version": "1.0.15",
+  "name": "ap-angular2-fullcalendar",
+  "version": "1.0.17",
   "description": "Angular2 component for FullCalendar",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nekken/ng2-fullcalendar.git"
+    "url": "git+https://github.com/lbertenasco/ap-ng2-fullcalendar.git"
   },
   "keywords": [
     "fullcalendar",
@@ -16,27 +16,27 @@
     "angular",
     "calendar"
   ],
-  "author": "Ken Nguyen <ken@nekken.ca> (http://nekken.ca)",
+  "author": "Luciano Bertenasco <lbertenasco@gmail.com> ()",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nekken/ng2-fullcalendar/issues"
+    "url": "https://github.com/lbertenasco/ap-ng2-fullcalendar/issues"
   },
-  "homepage": "https://github.com/nekken/ng2-fullcalendar#readme",
+  "homepage": "https://github.com/lbertenasco/ap-ng2-fullcalendar#readme",
   "dependencies": {
-    "@angular/common": "^2.0.1",
-    "@angular/core": "^2.0.1",
-    "@angular/forms": "^2.0.1",
-    "fullcalendar": "^3.0.1",
-    "@types/node": "^6.0.42",
-    "@types/fullcalendar": "^2.7.35",
-    "@types/jquery": "^2.0.34",
-    "@types/moment": "^2.11.29"
+    "@angular/common": "2.4.10",
+    "@angular/core": "2.4.10",
+    "@angular/forms": "2.4.10",
+    "@types/fullcalendar": "2.7.38",
+    "@types/jquery": "2.0.41",
+    "@types/moment": "2.13.0",
+    "@types/node": "7.0.8",
+    "fullcalendar": "3.2.0"
   },
   "devDependencies": {
-    "@angular/compiler": "^2.0.1",
-    "@angular/platform-browser": "^2.0.1",
-    "ng2-datepicker": "^2.0.0-dev5",
-    "rxjs": "^5.0.0-rc.3",
-    "typescript": "^2.0.9"
+    "@angular/compiler": "2.4.10",
+    "@angular/platform-browser": "2.4.10",
+    "ng2-datepicker": "2.0.0-dev5",
+    "rxjs": "5.2.0",
+    "typescript": "2.2.1"
   }
 }

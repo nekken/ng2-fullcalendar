@@ -15,17 +15,15 @@ import {Options} from "fullcalendar";
 })
 export class CalendarComponent implements OnInit,AfterViewInit,AfterContentChecked,AfterViewChecked{
 
-  @Input() options:Options;
+  @Input() options: Options;
   text: string;
-  calendarInitiated:boolean;
+  calendarInitiated: boolean;
 
-  constructor(
-    private element:ElementRef
-  ) {
+  constructor(private element:ElementRef) {
   }
 
   ngOnInit():void {
-    console.log("ngOnInit");
+    // console.log("ngOnInit");
   }
 
   ngAfterViewInit(){
@@ -37,6 +35,22 @@ export class CalendarComponent implements OnInit,AfterViewInit,AfterContentCheck
   ngAfterContentChecked(){
   }
   ngAfterViewChecked(){
+  }
+
+  fullCalendar(...args: any[]) {
+    if (!args) {
+      return;
+    }
+    switch (args.length) {
+      case 0:
+        return;
+      case 1:
+        return $(this.element.nativeElement).fullCalendar(args[0]);
+      case 2:
+        return $(this.element.nativeElement).fullCalendar(args[0], args[1]);
+      case 3:
+        return $(this.element.nativeElement).fullCalendar(args[0], args[1], args[2]);
+    }
   }
 
   updateEvent(event) {
