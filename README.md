@@ -103,11 +103,11 @@ export class MyComponent{
 #### Import the fullcalendar css
 If you're using Angular CLI, this is as simple as including one line in your style.css file:
 ```
-@import "fullcalendar/fullcalendar.min.css";
+@import "fullcalendar/dist/fullcalendar.min.css";
 ```
 Alternatively, you can just reference the file directly. This would look something like
 ```
-<link href="node_modules/fullcalendar/fullcalendar.min.css" rel="stylesheet">
+<link href="node_modules/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
 ```
 
 #### Use CalendarComponent as a ViewChild
