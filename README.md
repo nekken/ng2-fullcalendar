@@ -8,8 +8,8 @@ An Angular 2 component for [fullcalendar](https://fullcalendar.io/).
 npm install angular2-fullcalendar --save
 ```
 ## Usage
-####Import the calendar component
-```
+#### Import the calendar component
+```typescript
 import {CalendarComponent} from "angular2-fullcalendar/src/calendar/calendar";
 // other imports 
 
@@ -24,7 +24,7 @@ export class AppModule {}
 ```
 #### Add config in my-component.ts
 For a full list of options available, please refer to fullcalendar.io documentation at https://fullcalendar.io/docs/
-```
+```typescript
 @Component({
   selector: 'my-component',
   templateUrl: 'my-component.html'
@@ -97,16 +97,16 @@ export class MyComponent{
 }
 ```
 #### Add selector in template file my-component.html
-```
+```html
 <angular2-fullcalendar [options]="calendarOptions"></angular2-fullcalendar>
 ```
 #### Import the fullcalendar css
 If you're using Angular CLI, this is as simple as including one line in your style.css file:
-```
+```css
 @import "fullcalendar/dist/fullcalendar.min.css";
 ```
 Alternatively, you can just reference the file directly. This would look something like
-```
+```html
 <link href="node_modules/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
 ```
 
