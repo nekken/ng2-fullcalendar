@@ -31,7 +31,7 @@ For a full list of options available, please refer to fullcalendar.io documentat
 })
 export class MyComponent{
     calendarOptions:Object = {
-        height: 'parent',
+        height: 'parent', // if you're parent object doesn't have a height specified, remove this property
         fixedWeekCount : false,
         defaultDate: '2016-09-12',
         editable: true,
