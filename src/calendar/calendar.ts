@@ -1,49 +1,55 @@
-import {Component, Input, OnInit, AfterViewInit, AfterContentChecked, AfterViewChecked, ElementRef} from '@angular/core';
-import * as $ from 'jquery';
+import {AfterViewInit, Component, ElementRef, EventEmitter, Input, NgZone, Output} from '@angular/core';
+import {OptionsInput} from "fullcalendar";
 import 'fullcalendar';
-import {Options} from "fullcalendar";
+import * as $ from 'jquery';
 
-/*
-  Generated class for the Calendar component.
-
-  See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
-  for more info on Angular 2 Components.
-*/
 @Component({
-  template: '<div></div>',
-  selector: 'angular2-fullcalendar'
+    templateUrl: 'calendar.html',
+    selector: 'angular2-fullcalendar'
 })
-export class CalendarComponent implements OnInit,AfterViewInit,AfterContentChecked,AfterViewChecked{
+export class CalendarComponent implements AfterViewInit {
 
-  @Input() options:Options;
-  text: string;
-  calendarInitiated:boolean;
+    /*!
+     * This component is based on the ap-angular2-fullcalendar component
+     * This component is extended to use with more views on one page
+     */
 
-  constructor(
-    private element:ElementRef
-  ) {
-  }
+    // Generate random ID
+    id: string = Date.now().toString();
 
-  ngOnInit():void {
-    console.log("ngOnInit");
-  }
+    @Input() options: OptionsInput;
+    @Output() initialized: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  ngAfterViewInit(){
-    setTimeout(()=>{
-      // console.log("100ms after ngAfterViewInit ");
-      $('angular2-fullcalendar').fullCalendar(this.options);
-    }, 100)
-  }
-  ngAfterContentChecked(){
-  }
-  ngAfterViewChecked(){
-  }
+    public myView;
 
-  updateEvent(event) {
-    return $(this.element.nativeElement).fullCalendar('updateEvent', event);
-  }
+    constructor(private element: ElementRef, private zone: NgZone) {
+    }
 
-  clientEvents(idOrFilter) {
-    return $(this.element.nativeElement).fullCalendar('clientEvents', idOrFilter);
-  }
+    ngAfterViewInit() {
+        setTimeout(() => {
+            this.zone.runOutsideAngular(() => {
+                this.myView = $('#' + this.id);
+                this.myView.fullCalendar(this.options);
+                this.initialized.emit(true);
+            })
+        }, 100)
+    }
+
+
+    fullCalendar(...args: any[]): any {
+        if (!args) {
+            return;
+        }
+        switch (args.length) {
+            case 0:
+                return;
+            case 1:
+                return this.myView.fullCalendar(args[0]);
+            case 2:
+                return this.myView.fullCalendar(args[0], args[1]);
+            case 3:
+                return this.myView.fullCalendar(args[0], args[1], args[2]);
+        }
+    }
+
 }
